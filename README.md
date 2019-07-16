@@ -413,4 +413,14 @@ const info = props.info;
 }
 ```
 
-// 可以看到，使用 useContext 还是可以的，只是会多出一个全局变量。以上就是 TodoList 程序的编写内容。
+// 可以看到，使用 useContext 还是可以的，只是会多出一个全局变量。以上就是 TodoList 程序的编写内容。  
+最后，还可以使用 `memo` 对函数组件进行优化，避免不必要的渲染：
+```js
+import { memo } from 'react';
+
+const List = memo(/* 
+    之前编写的 List 函数内容
+*/);
+```
+
+memo 功能与 `useCallback`很相似，有两个参数。这里不做多介绍。
