@@ -1,33 +1,109 @@
-.App {
-  text-align: center;
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto;
+    text-align: center;
+    background-color: rgba(141, 139, 139, 0.1);
+    border-radius: 20px;
+    padding: 10px 30px 0px 30px;
+    border: 1px solid #ccc;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.wrapper h1.title{
+    font-size: 80px;
+    font-style: italic;
+    font-weight: 700;
+    padding-bottom: 10px;
+    color: rgba(83, 77, 20, 0.8);
+    text-shadow: 3px 3px 10px #666;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.wrapper form.todo-form{
+    display: flex;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 30px 0px 20px 0px;
+    flex-direction: row;
+    justify-content: center;
+}
+.wrapper form.todo-form input{
+    height: 40px;
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid #969696;
+    background-color: inherit;
+    box-sizing: border-box;
+    outline: none;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.wrapper form.todo-form button{
+    height: 40px;
+    width: 80px;
+    line-height: 40px;
+    font-size: 18px;
+    border: none;
+    margin-left: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+    background-color: green;
+    color: white;
+    box-shadow: 2px 2px 10px #000;
+    border-radius: 10px;
+    outline: none;
+    letter-spacing: 1.2px;
+}
+.wrapper form.todo-form button:hover{
+    transform: translateY(-3px);
+    transition: all 0.4s;
 }
 
-.App-link {
-  color: #61dafb;
+.wrapper ul{
+    padding: 20px 20px 10px 20px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-bottom: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wrapper ul li{
+    width: 100%;
+    list-style-type: none;
+    border: 1px solid green;
+    box-sizing: border-box;
+    height: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.wrapper ul li label{
+    flex: 1;
+    border-left: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+}
+.wrapper ul li label.routine{
+    text-decoration: line-through;
+}
+.wrapper ul li input{
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+.wrapper ul li span{
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: 600;
+    color: red;
+    padding-left: 10px;
 }
